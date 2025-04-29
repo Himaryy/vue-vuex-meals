@@ -1,36 +1,27 @@
-# basic-app
+# 🍽️ Meals Explorer
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a simple meals browsing website built using **Vue 3**, **Vue Router**, and **Vuex**. It allows users to explore meals by name, category, country, or starting letter, and view detailed information for each dish.
 
-## Recommended IDE Setup
+## 🛠️ Tech Stack
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Vue 3** – modern reactive frontend framework
+- **Vuex** – for centralized state management
+- **Vue Router** – for SPA-style routing
+- **Tailwind CSS** – for fast and responsive UI styling
+- **Axios** – for making HTTP requests to the [MealDB API](https://www.themealdb.com)
 
-## Customize configuration
+## 🔍 Features
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- 🔎 Search meals by name
+- 🅰️ Filter meals by first letter
+- 📄 View detailed recipe, ingredients, and instructions
+- 🧭 Responsive and mobile-friendly UI (**Soon**)
 
-## Project Setup
+## 🚀 Getting Started
 
-```sh
+```bash
+git clone https://github.com/your-username/meals-vue-app.git
+cd meals-vue-app
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
-"# vue-vuex-meals" 
