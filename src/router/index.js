@@ -1,3 +1,6 @@
+import DefaultLayout from '@/components/DefaultLayout.vue'
+import GuestLayout from '@/components/GuestLayout.vue'
+import MealDetails from '@/views/MealDetails.vue'
 import HomePage from '@/views/HomePage.vue'
 import MealByIngredients from '@/views/MealByIngredients.vue'
 import MealByLetters from '@/views/MealByLetters.vue'
@@ -7,32 +10,44 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomePage,
+    component: DefaultLayout,
+    children: [
+      {
+        path: '/',
+        name: 'home',
+        component: HomePage,
+      },
+
+      {
+        path: '/by-name/:name?',
+        name: 'byName',
+        component: MealByName,
+      },
+
+      {
+        path: '/by-letter/:letter?',
+        name: 'byLetter',
+        component: MealByLetters,
+      },
+
+      {
+        path: '/by-ingredient/:ingredient?',
+        name: 'byIngredient',
+        component: MealByIngredients,
+      },
+
+      // For meal deatils
+      {
+        // /:strMeal?
+        path: '/meal/:id?',
+        name: 'mealDetails',
+        component: MealDetails,
+      },
+    ],
   },
-
-  // {
-  //   path: '/letter/:letter',
-  //   name: 'byLetter',
-  // component: Letter, // change compnent name later
-  // },
-
   {
-    path: '/by-name/:name?',
-    name: 'byName',
-    component: MealByName,
-  },
-
-  {
-    path: '/by-letter/:letter?',
-    name: 'byLetter',
-    component: MealByLetters,
-  },
-
-  {
-    path: '/by-ingredient/:ingredient?',
-    name: 'byIngredient',
-    component: MealByIngredients,
+    path: '/guest',
+    component: GuestLayout,
   },
 ]
 

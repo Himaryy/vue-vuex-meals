@@ -20,12 +20,6 @@ onMounted(async () => {
 
 <template>
   <div class="flex p-8 justify-center flex-col items-center gap-4">
-    <input
-      type="text"
-      class="rounded border-2 border-gray-300 w-full"
-      placeholder="Search for meals"
-    />
-
     <div class="flex gap-2 mt-2">
       <RouterLink
         v-for="(letter, index) in letters"
