@@ -44,15 +44,15 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="py-8">
-      <YoutubeButton :href="meal.strYoutube">Youtube</YoutubeButton>
-    </div>
-
-    <div class="prose max-w-none text-gray-800 pb-8">
+    <div class="prose max-w-none text-gray-800 py-8">
       <h2 class="text-2xl font-semibold mb-4">Instructions</h2>
       <p class="whitespace-pre-line leading-relaxed">
         {{ meal.strInstructions }}
       </p>
+    </div>
+
+    <div class="pb-10">
+      <YoutubeButton :href="meal.strYoutube">Youtube</YoutubeButton>
     </div>
   </div>
 </template>

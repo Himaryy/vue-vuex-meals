@@ -1,5 +1,5 @@
 <script setup>
-import YoutubeButton from '@/components/YoutubeButton.vue'
+import MealItem from '@/components/MealItem.vue'
 import store from '@/store'
 import { computed, onMounted, ref, watch } from 'vue'
 import { onBeforeRouteLeave, useRoute, useRouter } from 'vue-router'
@@ -53,26 +53,7 @@ onBeforeRouteLeave(() => {
     />
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 py-8">
       <!-- <pre>{{ meals }}</pre> -->
-      <div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow-md rounded-xl">
-        <div class="overflow-hidden rounded-t-xl object-cover">
-          <router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
-            <img :src="meal.strMealThumb" :alt="meal.strMeal" class="rounded-t-xl w-full h-full" />
-          </router-link>
-        </div>
-
-        <div class="p-3 flex flex-col gap-2">
-          <h3 class="font-bold">{{ meal.strMeal }}</h3>
-
-          <div class="flex gap-2 items-center">
-            <YoutubeButton :href="meal.strYoutube">Youtube</YoutubeButton>
-            <!-- <RouterLink
-              to="/"
-              class="px-3 py-2 rounded hover:bg-green-500 hover:text-white transition-colors duration-200"
-              >View</RouterLink
-            > -->
-          </div>
-        </div>
-      </div>
+      <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
     </div>
   </div>
 </template>
