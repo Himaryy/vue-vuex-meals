@@ -51,9 +51,13 @@ onBeforeRouteLeave(() => {
       class="rounded border-2 border-gray-300 w-full"
       placeholder="Search for meals"
     />
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 py-8">
+    <div
+      v-if="meals && meals.length > 0"
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 py-8"
+    >
       <!-- <pre>{{ meals }}</pre> -->
       <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
     </div>
+    <p v-else class="text-center text-gray-500 py-10">No meals found.</p>
   </div>
 </template>

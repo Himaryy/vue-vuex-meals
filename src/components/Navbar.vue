@@ -15,7 +15,7 @@
 
       <RouterLink
         class="relative inline-flex items-center h-full px-2 group"
-        :to="{ name: 'byIngredient' }"
+        :to="{ name: 'ingredient' }"
       >
         <span class="transition-colors duration-200 ease-in">Meal by Ingredient</span>
         <span

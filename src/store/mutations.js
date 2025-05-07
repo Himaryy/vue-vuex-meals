@@ -9,3 +9,7 @@ export function setMealsByLetter(state, meal) {
 export function setMealsByIngredient(state, meal) {
   state.mealsByIngredient = meal
 }
+
+export function setAllIngredients(state, meal) {
+  state.allIngredients = meal
+}

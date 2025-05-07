@@ -6,6 +6,7 @@ import MealByIngredients from '@/views/MealByIngredients.vue'
 import MealByLetters from '@/views/MealByLetters.vue'
 import MealByName from '@/views/MealByName.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import ByIngredient from '@/views/ByIngredient.vue'
 
 const routes = [
   {
@@ -31,7 +32,13 @@ const routes = [
       },
 
       {
-        path: '/by-ingredient/:ingredient?',
+        path: '/ingredient',
+        name: 'ingredient',
+        component: ByIngredient,
+      },
+
+      {
+        path: '/by-ingredient/:ingredient',
         name: 'byIngredient',
         component: MealByIngredients,
       },
